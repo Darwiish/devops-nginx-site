@@ -1,17 +1,33 @@
-#  AWS Networking Project (EC2 + NGINX + DNS)
+# Networking Project (EC2 + NGINX + DNS)
 
 ## Overview
-This project demonstrates how to deploy a web server on AWS EC2 and connect it to a custom domain using DNS A records.
+This project covers the deployment of a web server on AWS EC2 and domain configuration using DNS.
 
-## What I built
-- EC2 instance on AWS
-- Installed and configured NGINX
-- Configured security group (port 80 open)
-- Connected domain using DNS A record
-- Hosted static website
+---
+
+## What I did
+
+- Provisioned an EC2 instance on AWS
+- Installed and configured NGINX web server
+- Configured security groups (HTTP and SSH access)
+- Set up DNS A record
+
+---
 
 ## Result
-A working website accessible via public IP and domain name.
 
-## Architecture
-Domain → DNS (A Record) → EC2 → NGINX → Website
+A working website accessible via both public IP address and custom domain name.
+
+---
+
+## EC2 Access
+
+The EC2 instance was accessed via SSH key-based authentication from a local machine, enabling secure remote administration and server configuration.
+
+---
+
+## Evidence
+
+All supporting screenshots are located in:
+
+networking/screenshots
