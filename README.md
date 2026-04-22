@@ -1,4 +1,4 @@
-# devops-nginx-site
+# Devops-nginx-site
 AWS EC2 + NGINX + Cloudflare + HTTPS + CI/CD deployment
 
 ##  Overview
