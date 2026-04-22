@@ -45,4 +45,4 @@ The website is accessible via a custom domain and EC2 public IP.
 
 ## Evidence
 
-See `/projects/nginx-domain-hosting/screenshots`
+See networking/screenshots
