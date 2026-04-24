@@ -34,7 +34,7 @@ This project uses a simple CI/CD pipeline to automatically deploy changes to an 
 5. NGINX is reloaded to apply the new changes.
 6. The updated website is live immediately.
 
-### ⚙️ Tech Stack
+### Tech Stack
 
 - GitHub Actions (CI/CD automation)
 - AWS EC2 (hosting server)
