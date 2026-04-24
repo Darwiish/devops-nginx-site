@@ -21,11 +21,11 @@ Domain → DNS (Cloudflare) → EC2 Public IP → NGINX → Website
 
 ---
 
-## 🚀 CI/CD Pipeline (GitHub → EC2 Deployment)
+##  CI/CD Pipeline (GitHub → EC2 Deployment)
 
 This project uses a simple CI/CD pipeline to automatically deploy changes to an AWS EC2 server.
 
-### 🔄 How it works
+###  How it works
 
 1. Code is pushed to the `main` branch on GitHub.
 2. GitHub Actions workflow is triggered automatically.
@@ -41,7 +41,7 @@ This project uses a simple CI/CD pipeline to automatically deploy changes to an 
 - NGINX (web server)
 - SSH (secure deployment connection)
 
-### 📦 Deployment Flow
+### Deployment Flow
 
 GitHub Repository → GitHub Actions → SSH to EC2 → Pull Latest Code → Reload NGINX → Live Website
 
