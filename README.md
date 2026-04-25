@@ -41,21 +41,11 @@ This project implements a CI/CD pipeline using GitHub Actions to automate deploy
 
 ---
 
-## Infrastructure & Configuration
-
-### EC2 Instance Overview
-
-![EC2 Dashboard](networking/screenshots/EC2-Dashboard.png)
-
-Shows the AWS EC2 dashboard with instance details including public IP and running state.
-
----
-
 ### Instance State
 
 ![Instance Running](networking/screenshots/Instance-State-Running.png)
 
-Confirms that the EC2 instance is active and serving traffic.
+Shows the AWS EC2 dashboard with instance details including public IP and running state. Confirms that the EC2 instance is active and serving traffic.
 
 ---
 
