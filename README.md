@@ -12,6 +12,7 @@ This project demonstrates hosting a static website on an AWS EC2 instance using 
 - Deployed custom HTML website
 - Configured DNS A record for domain mapping
 - Enabled public access over HTTP/HTTPS
+- Implemented CI/CD pipeline for automated deployment
 
 ---
 
@@ -23,48 +24,90 @@ Domain → DNS (Cloudflare) → EC2 Public IP → NGINX → Website
 
 ## CI/CD Pipeline (GitHub → EC2 Deployment)
 
-This project uses a CI/CD pipeline to automatically deploy changes to an EC2 server.
+This project implements a CI/CD pipeline using GitHub Actions to automate deployment to an AWS EC2 instance.
 
 ### How it works
 
-1. Code is pushed to the `main` branch
-2. GitHub Actions is triggered
-3. Connects to EC2 via SSH
-4. Pulls latest code
-5. Reloads NGINX
-6. Website updates instantly
+1. Code is pushed to the `main` branch  
+2. GitHub Actions workflow is triggered  
+3. The workflow connects to the EC2 instance via SSH  
+4. Latest code is pulled from the GitHub repository  
+5. NGINX is reloaded to apply updates  
+6. Changes are reflected live on the website  
 
----
-
-## Evidence (Step-by-step)
-
-### 1. CI/CD Pipeline Success
+### CI/CD Pipeline Execution
 
 ![CI/CD Pipeline](networking/screenshots/CICD-pipeline-success.png)
 
 ---
 
-### 2. DNS Configuration (Cloudflare)
+## Infrastructure & Configuration
 
-![DNS Setup](networking/screenshots/DNS-Domain%20setup.png)
+### EC2 Instance Overview
+
+![EC2 Dashboard](networking/screenshots/EC2-Dashboard.png)
+
+Shows the AWS EC2 dashboard with instance details including public IP and running state.
 
 ---
 
-### 3. SSH Access to EC2
+### Instance State
+
+![Instance Running](networking/screenshots/Instance-State-Running.png)
+
+Confirms that the EC2 instance is active and serving traffic.
+
+---
+
+### Security Group Configuration
+
+![Inbound Rules](networking/screenshots/InboundRules.png)
+
+Inbound rules allowing:
+- HTTP (port 80) for web traffic  
+- SSH (port 22) for remote access  
+
+---
+
+### Elastic IP Configuration
+
+![Elastic IP](networking/screenshots/Elastic%20IP.png)
+
+Elastic IP assigned to ensure a stable public address for domain mapping.
+
+---
+
+## Server Access
+
+### SSH Connection to EC2
 
 ![SSH Login](networking/screenshots/EC2%20SSH%20Login%20(Remote%20Server%20Access).png)
 
+Secure remote access to the EC2 instance using SSH and key-based authentication.
+
 ---
 
-### 4. Live Website
+## DNS Configuration
+
+### Cloudflare DNS Setup
+
+![DNS Setup](networking/screenshots/DNS-Domain%20setup.png)
+
+A record maps the custom domain to the EC2 public IP address.
+
+---
+
+## Website
+
+A custom static HTML website hosted on an AWS EC2 instance and served using the NGINX web server.
+
+The site is accessible via:
+- EC2 public IP
+- Custom domain
+
+### Live Website
 
 ![Website](networking/screenshots/Live-Website-browser.png)
-
----
-
-### 5. NGINX Running
-
-![NGINX Status](networking/screenshots/Nginx-Status.png)
 
 ---
 
@@ -81,10 +124,11 @@ This project uses a CI/CD pipeline to automatically deploy changes to an EC2 ser
 
 ## Result
 
-The website is accessible via:
+A fully functional cloud-hosted website with:
 
-- Public IP
-- Custom Domain
+- Automated CI/CD deployment  
+- Public accessibility via domain and IP  
+- Proper server and DNS configuration  
 
 ---
 
